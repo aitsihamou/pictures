@@ -1,0 +1,61 @@
+@media #{$minMeduim} {
+  .circle-wrapper {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    &:hover {
+      .icon {
+        color: $seccolor;
+      }
+      .circle {
+        border: 2.5px dashed $forcolor;
+        animation: spin 3s linear infinite;
+      }
+      .success {
+        background-color: white;
+      }
+    }
+  }
+
+
+}
+//=========================
+.circle-wrapper {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+
+.icon {
+  position: static;
+  color: white;
+  font-size: 55px;
+  top: 100px;
+  left: auto;
+  transform: translate(0, -130%);
+}
+@media #{$maxMobile} {
+  .icon{
+    transform: translate(0, -140%);
+    }
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 2.5px;
+  background-clip: content-box;
+  animation: spin 10s linear infinite;
+  border: 3px dashed $forcolor;
+}
+
+.success {
+  background-color: $seccolor;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

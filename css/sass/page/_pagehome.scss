@@ -1,0 +1,678 @@
+.slider {
+	//	background-image: url("/img/icons/slide.svg");
+	background-size: cover;
+	padding-top: 50px;
+	.container {
+		@media #{$minLarge} {
+			background-color: $lastcolor;
+			.intro {
+				font-size: 50px;
+			}
+		}
+		@media #{$minSmall} {
+			border-radius: 26% 54% 49% 51% / 22% 51% 49% 79%;
+			background-color: $seccolor;
+			min-height: 600px;
+			padding: 30px;
+			.box {
+				padding: 45px;
+				background-color: $trecolor;
+				border-radius: 26% 74% 49% 51% / 21% 51% 49% 79%;
+			}
+			.box1 {
+				animation: morph 6s infinite;
+				padding: 44px;
+				//background-color: $lastcolor;
+				//background-image: url("/img/ourimg/slide.jpg");
+				border: 5px solid white;
+				background-size: cover;
+				@keyframes morph {
+					0% {
+						border-radius: 26% 74% 49% 51% / 21% 51% 49% 79%;
+					}
+					50% {
+						border-radius: 100% 39% 66% 75% / 65% 49% 81% 67%;
+					}
+					100% {
+						border-radius: 26% 74% 49% 51% / 21% 51% 49% 79%;
+					}
+				}
+				.intro {
+					font-size: 30px;
+				}
+			}
+		}
+		@media #{$maxMobile} {
+			background-color: $seccolor;
+			.intro {
+				width: 100%;
+				margin: 0px;
+				h1 {
+					font-size: 40px;
+				}
+			}
+		}
+
+		.intro {
+			text-align: center;
+			width: 80%;
+			margin: auto;
+			padding: 40px 10px;
+			h1 {
+				color: white;
+				padding: 15px;
+				margin: 0px;
+			}
+			p {
+				font-size: 25px;
+				color: $lastcolor;
+				line-height: 1.5;
+				font-family: cursive;
+			}
+
+			.buttonlinks {
+				button {
+					@include button(250px, 30px, $trecolor, white, 10px 15px, 5px, 50px, 3px, white, white, $trecolor);
+				}
+			}
+		}
+	}
+}
+//start about
+.about {
+	margin: auto;
+	.box {
+		width: calc((100%) / 2);
+		float: left;
+		height: 500px;
+	}
+	.boximg {
+		margin: auto;
+		padding: 5px;
+		img {
+			width: 100%;
+			min-height: 500px;
+			border-radius: 62% 28% 36% 64% / 61% 80% 19% 39%;
+			box-shadow: 7px 10px 5px 4px rgba(0, 0, 0, 0.3);
+			/* -webkit-box-shadow: 7px 3px 5px 5px rgba(0, 0, 0, 0.3);
+			-moz-box-shadow: 7px 3px 5px 5px rgba(0, 0, 0, 0.3); */
+		}
+	}
+	.boxdesc {
+		margin: auto;
+		.title {
+			color: $seccolor;
+		}
+		p {
+			color: $lastcolor;
+			line-height: 1.5;
+		}
+		button {
+			@include button(200px, 25px, $forcolor, white, 10px 15px, 5px, 25px, 3px, $forcolor, white, $forcolor);
+		}
+	}
+	@media #{$maxMobile} {
+		.box {
+			width: 100%;
+		}
+	}
+	@media #{$minSmall} {
+		//background-color: crimson;
+		.boxdesc {
+			padding: 20px;
+			.title {
+				font-size: 60px;
+			}
+			p {
+				font-size: 25px;
+			}
+		}
+	}
+	@media #{$maxSmall} {
+		//background-color: blue;
+		.boxdesc {
+			padding: 30px;
+			.title {
+				font-size: 50px;
+			}
+			p {
+				font-size: 20px;
+			}
+		}
+	}
+}
+//end about
+// start service
+.services {
+	margin-bottom: 50px;
+	margin-top: 50px;
+	.service-box {
+		text-align: center;
+		@media #{$maxMobile} {
+			margin-bottom: 15px;
+			padding: 10px;
+			background-color: whitesmoke;
+			border-radius: 20px;
+			i {
+				display: block;
+				margin-bottom: 15px;
+			}
+		}
+		@media #{$minSmall} {
+			float: left;
+			width: calc((100% - 108px) / 3);
+			margin: 15px;
+			padding: 20px;
+			box-shadow: 5px 5px 7px 3px rgba(0, 0, 0, 0.39);
+			-webkit-box-shadow: 5px 5px 7px 3px rgba(0, 0, 0, 0.39);
+			-moz-box-shadow: 5px 5px 7px 3px rgba(0, 0, 0, 0.39);
+			border-radius: 15px;
+			&:hover {
+				background-color: $trecolor;
+				box-shadow: 5px 5px 2px -32px rgba(0, 0, 0, 0.48);
+				.icon {
+					color: $seccolor;
+				}
+				.circle {
+					border: 4px dashed $seccolor;
+					animation: spin 3s linear infinite;
+				}
+				.success {
+					background-color: white;
+				}
+			}
+		}
+
+		.service-title {
+			color: $firstcolor;
+		}
+
+		.service-desc {
+			color: $lastcolor;
+			line-height: 1.6;
+		}
+		.link {
+			i {
+				@include button(100px, 15px, $forcolor, white, 5px 10px, 5px, 25px, 3px, $forcolor, white, $forcolor);
+			}
+		}
+	}
+}
+// end service
+//start custumers
+/* .custumers {
+	.container {
+		background-color: $seccolor;
+		.element {
+			
+			.item {
+				@media #{$minSmall} {
+				
+				}
+				@media #{$maxSmall} {
+					
+				}
+				@media #{$maxMobile} {
+					
+				}
+
+				i {
+					
+					&:hover {
+						
+					}
+				}
+			}
+		}
+	}
+} */
+.custumers {
+	.container {
+		color: $seccolor;
+		overflow: hidden;
+		@keyframes scroll {
+			0% {
+				transform: translateX(5vw);
+			}
+			100% {
+				transform: translateX(-1 * 15vw * 6);
+			}
+		}
+
+		.elements {
+			display: flex;
+			&:hover {
+				animation-play-state: paused;
+			}
+			.item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-shrink: 0;
+				white-space: nowrap;
+				img {
+					height: 80px;
+				}
+			}
+		}
+		@media #{$maxMobile} {
+			.elements {
+				animation: scroll 3s linear infinite;
+
+				.item {
+					width: 30vw;
+				}
+			}
+		}
+		@media #{$minSmall} {
+			.elements {
+				margin-block: 50px;
+				animation: scroll 5s linear infinite;
+
+				.item {
+					width: 20vw;
+				}
+			}
+		}
+
+		@media #{$minMeduim} {
+			.elements {
+				animation: scroll 10s linear infinite;
+
+				.item {
+					width: 12vw;
+					img {
+						height: 80px;
+					}
+				}
+			}
+		}
+	}
+}
+//end custumers
+
+// start limages
+.limages {
+	.container {
+		position: relative;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	.pic-box {
+		//margin: 0 0.65rem;
+		display: grid;
+		.pic-box-img {
+			height: auto;
+			margin: 0.3rem;
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.02);
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		@media #{$minMeduim} {
+			//ipad pro to xxlarge
+			grid-template-columns: repeat(5, 1fr);
+			grid-auto-flow: row dense;
+
+			.pic-box-img:first-child {
+				grid-row: span 1;
+				grid-column: span 2;
+			}
+			.pic-box-img:nth-child(2) {
+				grid-column: span 2;
+				grid-row: span 2;
+			}
+			.pic-box-img:nth-child(6),
+			.pic-box-img:nth-child(8) {
+				grid-row: span 3;
+				grid-column: span 2;
+			}
+		}
+		@media #{$maxSmall} {
+			//ipad
+			grid-template-columns: repeat(3, 1fr);
+			grid-auto-flow: row dense;
+			.pic-box-img:first-child {
+				grid-row: span 1;
+				grid-column: span 2;
+			}
+			.pic-box-img:nth-child(6),
+			.pic-box-img:nth-child(4) {
+				grid-row: span 2;
+				grid-column: span 2;
+			}
+		}
+
+		@media #{$maxMobile} {
+			//mobile
+			grid-template-columns: repeat(1, 1fr);
+			grid-auto-flow: row dense;
+			.pic-box-img {
+				grid-row: span 1;
+				grid-column: span 2;
+			}
+		}
+	}
+	//------------------lightbox ------------------
+	#gg-screen {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		display: none;
+		background: rgba(255, 255, 255, 0.85);
+		text-align: center;
+	}
+	#gg-screen .gg-image {
+		height: 100%;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#gg-screen .gg-image img {
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0 auto;
+	}
+	.gg-bt {
+		width: 38px;
+		height: 38px;
+		background: rgba(255, 255, 255, 0.6);
+		color: #222;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 32px;
+		vertical-align: middle;
+		display: inline-block;
+		cursor: pointer;
+		-moz-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		-webkit-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		font-size: 25px;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		box-sizing: border-box;
+		padding-left: 2px;
+	}
+	.gg-bt:hover {
+		background: rgba(255, 255, 255, 0.8);
+		border: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	.gg-close {
+		position: fixed;
+		top: 0.5em;
+	}
+	.gg-close,
+	.gg-nxt {
+		right: 0.5em;
+	}
+	.gg-prev {
+		left: 0.5em;
+	}
+	.gg-prev,
+	.gg-nxt {
+		position: fixed;
+		bottom: 50%;
+	}
+
+	//----------------end lightbox -----------------
+}
+// end limages
+
+// start teamwork
+.teamwork {
+	.team-box {
+		margin: 10px;
+		padding: 20px;
+		width: calc((100% - 60px) / 3);
+		float: left;
+		text-align: center;
+		//background-color: $trecolor;
+		border-radius: 25px;
+		transition: background-color 1s ease-out;
+		&:hover {
+			//background-color: $forcolor;
+			.team-box-links {
+				visibility: visible;
+			}
+		}
+		@media #{$maxMobile} {
+			margin: 10px;
+			padding: 20px;
+			width: 100%;
+			.box-img {
+				height: 250px;
+				width: 250px;
+				img {
+					height: 250px;
+					width: 250px;
+				}
+			}
+			.box-title {
+				.name {
+					font-size: 35px;
+				}
+				.profile {
+					font-size: 25px;
+				}
+			}
+		}
+		@media #{$minSmall} {
+			.box-img {
+				height: 200px;
+				width: 200px;
+				img {
+					height: 200px;
+					width: 200px;
+				}
+			}
+			.box-title {
+				.name {
+					font-size: 25px;
+				}
+				.profile {
+					font-size: 20px;
+				}
+			}
+		}
+		@media #{$minLarge} {
+			.box-img {
+				height: 250px;
+				width: 250px;
+				img {
+					height: 250px;
+					width: 250px;
+				}
+			}
+			.box-title {
+				.name {
+					font-size: 45px;
+				}
+				.profile {
+					font-size: 25px;
+				}
+			}
+		}
+		.box-img {
+			padding: 5px;
+			margin: auto;
+			background-color: $forcolor;
+			animation: morph 6s infinite;
+			@keyframes morph {
+				0% {
+					border-radius: 62% 38% 36% 64% / 61% 81% 19% 39%;
+				}
+				50% {
+					border-radius: 74% 26% 53% 47% / 36% 43% 57% 64%;
+				}
+				100% {
+					border-radius: 62% 38% 36% 64% / 61% 81% 19% 39%;
+				}
+			}
+			img {
+				border: 5px solid $trecolor;
+				padding: 5px;
+				animation: morph1 4s infinite;
+				@keyframes morph1 {
+					0% {
+						border-radius: 81% 19% 27% 73% / 59% 15% 85% 41%;
+					}
+					50% {
+						border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+					}
+					100% {
+						border-radius: 81% 19% 27% 73% / 59% 15% 85% 41%;
+					}
+				}
+			}
+		}
+		.box-title {
+			margin: 20px;
+			.name {
+				color: $firstcolor;
+
+				margin: 15px 0px 0px 10px;
+				display: block;
+			}
+			.profile {
+				color: $lastcolor;
+				margin: 5px 0px;
+			}
+		}
+		.team-box-links {
+			visibility: hidden;
+			background-color: white;
+			margin-top: -15px;
+			ul {
+				display: inline-flex;
+				margin: 0px;
+				li {
+					margin: 5px;
+					font-size: 30px;
+					color: $firstcolor;
+					&:hover {
+						cursor: pointer;
+						transform: scale(1.3);
+					}
+				}
+			}
+		}
+	}
+}
+// end teamwork
+
+// start events
+.events {
+	.container {
+		.event {
+			display: flex;
+			.side1 {
+				@media #{$maxMobile} {
+					display: none;
+				}
+				width: 60%;
+				min-height: 500px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.side2 {
+				padding: 20px;
+				margin-left: -150px;
+				@media #{$maxMobile} {
+					margin-left: 0px;
+				}
+				.block {
+					display: flex;
+					@media #{$maxMobile} {
+						display: inline-block;
+						background-color: $seccolor;
+						margin-block: 10px;
+					}
+					margin-block: 5px;
+					.date {
+						padding: 20px;
+						width: 30%;
+						@media #{$maxMobile} {
+							padding: 0px;
+							width: 100%;
+							margin: 0px;
+						}
+						background-color: $firstcolor;
+						color: white;
+						text-align: center;
+						.dd {
+							font-size: 50px;
+							display: block;
+						}
+						.mm {
+							font-size: 40px;
+							display: block;
+						}
+					}
+					.desc {
+						background-color: $trecolor;
+						width: auto;
+						padding-left: 5px;
+						@media #{$maxMobile} {
+							width: 100%;
+							margin: 0px;
+						}
+						h3 {
+							font-size: 30px;
+							font-weight: 600;
+							color: $firstcolor;
+							margin-block: 5px;
+						}
+						p {
+							margin-block: 8px;
+						}
+						.links {
+							display: flex;
+							.local {
+								color: $lastcolor;
+								width: 80%;
+								padding-block: 5px;
+								margin-block: 5px;
+								i {
+									margin-right: 3px;
+									font-size: 25px;
+								}
+								span {
+									font-size: 20px;
+									//font-weight: 600
+								}
+							}
+							button {
+								@include button(
+									100px,
+									20px,
+									$forcolor,
+									white,
+									0px 0px,
+									5px,
+									0px,
+									1px,
+									$forcolor,
+									white,
+									$forcolor
+								);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// end events

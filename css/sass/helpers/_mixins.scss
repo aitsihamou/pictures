@@ -1,0 +1,34 @@
+/*
+mixins for prefixer
+*/
+@mixin prefixer($prproperty, $prvalue, $prprefixes: ()) {
+	@each $prprefix in $prprefixes {
+		#{'-' + $prprefix + '-' + $prproperty}: $prvalue;
+	}
+	#{$prproperty}: $prvalue;
+}
+
+//---hover link
+@mixin linkshover($color, $bcolor, $paddvalue, $radvalue) {
+	transition: 0.2s;
+	color: $color;
+	padding: $paddvalue;
+	border-radius: $radvalue;
+	background-color: $bcolor;
+}
+
+//---hover link
+@mixin button($mw_val,$font_size,$back_color,$color,$p_val,$m_value,$br_val,$b_size,$br_color,$h_back_color,$h_color) {
+	min-width: $mw_val;
+	font-size: $font_size;
+	background-color: $back_color;
+	color: $color;
+	padding: $p_val;
+	margin: $m_value;
+	border-radius: $br_val;
+	border: $b_size solid $br_color;
+	&:hover {
+		background-color: $h_back_color;
+		color: $h_color;
+	}
+}

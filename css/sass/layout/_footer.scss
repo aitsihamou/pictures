@@ -1,0 +1,133 @@
+.footer {
+	background-color: #e5e5e5;
+	padding-top: 30px;
+	margin-top: 50px;
+	overflow-x: hidden;
+	text-align: center;
+	@media #{$minSmall} {
+		.gallery,
+		.info,
+		.contact {
+			float: left;
+		}
+	}
+	.gallery {
+		@media #{$minSmall} {
+			width: 100%;
+		}
+		@media #{$minMeduim} {
+			width: 50%;
+		}
+		.img-box {
+			margin-bottom: 20px;
+			overflow: hidden;
+			img {
+				width: calc((100% - 20px) / 3);
+				height: 150px;
+				float: left;
+				margin: 2px;
+				border: 1px solid $seccolor;
+				transition: transform 0.2s;
+				&:hover {
+					@include prefixer(transform, scale(.95), webkit moz);
+				}
+				@media #{$maxMobile} {
+					float: none;
+				}
+			}
+		}
+	}
+	.info {
+		
+		@media #{$minSmall} {
+			width: 50%;
+		}
+		@media #{$minMeduim} {
+			width: 25%;
+		}
+		ul {
+			@media #{$minSmall} {
+				//margin-top: 50px;
+			}
+			color: $lastcolor;
+			line-height: 1.8;
+			li {
+				a:hover
+			{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			}
+		}
+		h5 {
+			color: $lastcolor;
+		}
+		p {
+			color: $lastcolor;
+		}
+	}
+	span {
+		color: $seccolor;
+	}
+	.contact {
+		@media #{$minSmall} {
+			width: 50%;
+		}
+		@media #{$minMeduim} {
+			width: 25%;
+		}
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			border: 1px solid $seccolor;
+			padding: 10px;
+			margin-bottom: 5px;
+			border-radius: 10px;
+			width: 100%;
+		}
+		textarea {
+			height: 120px;
+		}
+
+		.main-button {
+			@media #{$maxMobile} {
+				width: 100% !important;
+			}
+			@include button(150px, 20px, $seccolor, white, 5px 10px, 5px 0px, 25px, 2px, $seccolor, white, $forcolor);
+		}
+		@media #{$minSmall} {
+			input[type="text"] {
+				margin-top: 40px;
+			}
+		}
+	}
+	.f-title {
+		color: $firstcolor;
+		font-weight: normal;
+		font-size: 25px;
+	}
+	.copyright {
+		margin-top: 20px;
+		padding: 20px 0px;
+		border-top: 1px solid $seccolor;
+		overflow: hidden;
+		color: $lastcolor;
+		.text,
+		.author {
+			float: left;
+			@media #{$maxMobile} {
+				float: none;
+				margin-bottom: 10px;
+			}
+			@media #{$minSmall} {
+				width: 50%;
+			}
+		}
+
+		@media #{$minSmall} {
+			.author {
+				text-align: right;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+* {
+	@include prefixer (box-sizing, border-box , webkit moz);
+}
+.container {
+	margin :auto;
+	position: relative;
+	@media #{$minSmall} {width: 750px}
+	@media #{$minMeduim} {width: 970px}
+	@media #{$minLarge} {width: 1170px}
+}
+.clear-fix { clear: both; }
+.xs-text-center {
+	@media #{$maxMobile}{
+		text-align: center;
+	}
+
+}

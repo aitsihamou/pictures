@@ -1,0 +1,116 @@
+.header {
+	overflow: hidden;
+	padding: 5px;
+	background-color: $seccolor;
+	.logo {
+		width: 30%;
+		float: left;
+		padding: 0px;
+		.circle {
+			border: 3px dashed white !important;
+		}
+		.success {
+			background-color: white !important;
+		}
+		.icon {
+			img{
+				margin-bottom: -8px;
+			}
+		}
+		@media #{$maxMobile} {
+			width: 100%;
+			float: none;
+			text-align: center;
+		}
+		@media #{$minSmall} {
+			width: 100%;
+			float: none;
+			text-align: center;
+		}
+		@media #{$minMeduim} {
+			width: 30%;
+			float: left;
+		}
+		
+	}
+	.navbar {
+		overflow: hidden;
+		
+		ul {
+			display: inline;
+			li {
+				width: 20%;
+				float: left;
+				font-size: 25px;
+				text-align: center;
+				a {
+					color: $seccolor;
+					padding: 15px 10px;
+					display: inline-block;
+					text-decoration: none;
+					&:hover {
+						color: $trecolor;
+					}
+				}
+			}
+		}
+		@media #{$maxMobile} {
+			width: 100%;
+			float: none;
+			margin-bottom: 15px;
+			.menu {
+				display: none;
+			}
+			.menu {
+				li {
+					display: block;
+					width: 100%;
+					background-color: $seccolor;
+					a {
+						color: white;
+					}
+				}
+			}
+			.dropbtn {
+				i {
+					color: white;
+				}
+				width: 100%;
+				border: none;
+				background-color: $seccolor;
+				padding: 10px;
+			}
+		}
+		@media #{$minSmall} {
+			background-color: $seccolor;
+			width: 100%;
+			float: none;
+			text-align: center;
+			margin-bottom: 15px;
+			.dropbtn {
+				display: none;
+			}
+			.menu {
+				display: block !important;
+				a {
+					color: white;
+				}
+			}
+		}
+		@media #{$minMeduim} {
+			
+			width: 70%;
+			float: left;
+			padding: 0px;
+			margin: 20px auto;
+			text-align: left;
+			.menu {
+				text-align: center;
+				background-color: $seccolor;
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+}
