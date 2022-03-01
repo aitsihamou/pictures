@@ -5,31 +5,42 @@
 	overflow-x: hidden;
 	text-align: center;
 	@media #{$minSmall} {
-		.gallery,
-		.info,
-		.contact {
+		.box {
 			float: left;
+			width:calc((100% -20) / 3); ;
 		}
+		.gallery{
+			width:100% ;
+			.img-box {
+				padding-inline: 100px;
+				img {
+					height: 120px;
+				}
+		}}
+	}
+	@media #{$minMeduim} {
+		.box {
+			width: calc((100% - 20px) / 4);
+		}
+		.gallery{
+			.img-box {
+				padding-inline: 5px;
+				
+		}}
 	}
 	.gallery {
-		@media #{$minSmall} {
-			width: 100%;
-		}
-		@media #{$minMeduim} {
-			width: 50%;
-		}
 		.img-box {
 			margin-bottom: 20px;
 			overflow: hidden;
 			img {
 				width: calc((100% - 20px) / 3);
-				height: 150px;
+				height: 100px;
 				float: left;
 				margin: 2px;
-				border: 1px solid $seccolor;
 				transition: transform 0.2s;
+				
 				&:hover {
-					@include prefixer(transform, scale(.95), webkit moz);
+					@include prefixer(transform, scale(0.95), webkit moz);
 				}
 				@media #{$maxMobile} {
 					float: none;
@@ -37,26 +48,16 @@
 			}
 		}
 	}
-	.info {
-		
-		@media #{$minSmall} {
-			width: 50%;
-		}
-		@media #{$minMeduim} {
-			width: 25%;
-		}
+	.info,
+	.links {
 		ul {
-			@media #{$minSmall} {
-				//margin-top: 50px;
-			}
 			color: $lastcolor;
 			line-height: 1.8;
 			li {
-				a:hover
-			{
-				text-decoration: underline;
-				cursor: pointer;
-			}
+				a:hover {
+					text-decoration: underline;
+					cursor: pointer;
+				}
 			}
 		}
 		h5 {
@@ -65,17 +66,11 @@
 		p {
 			color: $lastcolor;
 		}
-	}
-	span {
-		color: $seccolor;
+		span {
+			color: $seccolor;
+		}
 	}
 	.contact {
-		@media #{$minSmall} {
-			width: 50%;
-		}
-		@media #{$minMeduim} {
-			width: 25%;
-		}
 		input[type="text"],
 		input[type="email"],
 		textarea {
@@ -86,19 +81,13 @@
 			width: 100%;
 		}
 		textarea {
-			height: 120px;
+			height: 75px;
 		}
-
 		.main-button {
-			@media #{$maxMobile} {
-				width: 100% !important;
-			}
 			@include button(150px, 20px, $seccolor, white, 5px 10px, 5px 0px, 25px, 2px, $seccolor, white, $forcolor);
 		}
-		@media #{$minSmall} {
-			input[type="text"] {
-				margin-top: 40px;
-			}
+		@media #{$maxMobile}{
+			padding: 40px;
 		}
 	}
 	.f-title {

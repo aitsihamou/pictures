@@ -5,3 +5,8 @@ $(function () {
   });
 });
 //=====end 
+// adapt the section height with the screen
+$(function () {
+  $('.slider ').height($(window).height() - ( ($('.header').innerHeight())));
+
+});

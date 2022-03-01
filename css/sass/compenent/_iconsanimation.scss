@@ -1,25 +1,4 @@
-@media #{$minMeduim} {
-  .circle-wrapper {
-    margin: auto;
-    width: 100px;
-    height: 100px;
-    &:hover {
-      .icon {
-        color: $seccolor;
-      }
-      .circle {
-        border: 2.5px dashed $forcolor;
-        animation: spin 3s linear infinite;
-      }
-      .success {
-        background-color: white;
-      }
-    }
-  }
 
-
-}
-//=========================
 .circle-wrapper {
   margin: auto;
   width: 100px;
