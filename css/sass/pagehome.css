@@ -512,12 +512,13 @@ ul, ol {
   .slider .container .intro button {
     font-size: 20px;
   }
-  .slider .container .intro .tools div {
-    margin-inline: 5px;
-    padding: 10px;
+  .slider .container .intro .tools .ik {
+    margin-inline: 2px;
+    padding: 15px;
+    border: 2px solid #4A7140;
   }
-  .slider .container .intro .tools div img {
-    height: 50px;
+  .slider .container .intro .tools .ik img {
+    height: 40px;
   }
 }
 

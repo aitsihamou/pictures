@@ -7,6 +7,7 @@ $(function () {
 //=====end 
 // adapt the section height with the screen
 $(function () {
-  $('.slider ').height($(window).height() - ( ($('.header').innerHeight())));
-
+  if($(window).height() > 991 ){
+    $('.slider').height($(window).height() - ( ($('.header').innerHeight())));
+  }
 });
